@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StringManipulator {
     public  String removeVowels(String input)
     {
-        StringBuffer out1 = new StringBuffer("");
+        StringBuilder out1 = new StringBuilder("");
         if(input == null){
             return null;
         }else {
