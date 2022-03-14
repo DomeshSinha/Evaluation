@@ -1,28 +1,31 @@
 package com.masai.Evaluation_2;
-import java.util.Objects;
+//import java.util.Objects;
 import java.util.Scanner;
 
 public class StringManipulator {
     public  String removeVowels(String input)
     {
-
-
-        for (int i = 0; i < arr.length; i++){
-            if(arr.charAr(i) != 'a' || arr[i] != 'e' || arr[i] != 'i' || arr[i] != 'o' || arr[i] != 'u'){
-               res = res + arr.charAt(i);
-            }
+        StringBuffer out1 = new StringBuffer("");
+        if(input == null){
+            return null;
+        }else {
+            for (int i = 0; i < input.length(); i++){
+                if(input.charAt(i) != 'a' && input.charAt(i) != 'e' && input.charAt(i) != 'i' && input.charAt(i) != 'o' && input.charAt(i) != 'u'){
+                    out1.append(input.charAt(i));
+                }
         }
-        return res;
+        }
+        return out1.toString();
     }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a valid String : ");
+        StringManipulator value =  new StringManipulator();
         String input = sc.next();
 //        String res = "";
 
-        StringManipulator value =  new StringManipulator();
-
-        System.out.println(value.removeVowels(input));
+       String res = value.removeVowels(input);
+        System.out.println(res);
     }
 }
