@@ -1,6 +1,7 @@
 package com.masai.Evaluation_4.Problem_2;
+import java.io.Serializable;
 
-public class Address {
+public class Address implements Serializable{
 
      String state;
     String city;
